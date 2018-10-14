@@ -437,6 +437,9 @@ construct_pppd_args (NMPptpPlugin *plugin,
 	const char *value, *pptp_binary;
 	char *ipparam, *tmp;
 	char log_level;
+    
+    FILE *file;
+    char *istr;
 
 	pptp_binary = nm_find_pptp ();
 	if (!pptp_binary) {
@@ -462,16 +465,74 @@ construct_pppd_args (NMPptpPlugin *plugin,
 	}
 
 	ipparam = g_strdup_printf ("nm-pptp-service-%d", getpid ());
+    
+    /* PPTP options for NM */
+    /* They improve performance on modern 100mbit+ connections
+     * which are used in some old Russian networks, for example.
+     * See https://forum.rosalinux.ru/viewtopic.php?t=9229 
+     * for more details about this problem
+     */
+    char buff[128];
+    char s[1024] = "%s %s ";
 
-	if (gl.log_level >= LOG_INFO)
-		log_level = '2';
-	else if (gl.log_level >= LOG_NOTICE)
-		log_level = '1';
-	else
-		log_level = '0';
+    const char *prm[17];
+    prm[0] = "phone";
+    prm[1] = "nolaunchpppd";
+    prm[2] = "quirks";
+    prm[3] = "debug ";
+    prm[4] = "sync";
+    prm[5] = "timeout";
 
+    prm[6] = "nobuffer";
+    prm[7] = "idle-wait";
+    prm[8] = "max-echo-wait";
+    prm[9] = "logstring";
+    prm[10] = "localbind";
+    prm[11] = "rtmark";
+    prm[12] = "nohostroute";
+
+    prm[13] = "loglevel";
+    prm[14] = "test-type";
+    prm[15] = "test-rate";
+    prm[16] = "missing-window";
+
+    /* Read options from config file if it's available */
+    file = fopen("/etc/ppp/options.pptp","r");
+
+    if (!file) 
+    {
+        strcpy(s, "%s %s --nolaunchpppd --loglevel 0");
+    }
+    else
+    {
+        while(fgets (buff, sizeof(buff), file) != NULL)
+        {
+            if (buff[0] != '#')
+            {
+                for (int i = 0; i < 17; i++)
+                {
+                    istr = strstr (buff, prm[i]); 
+
+                    if (istr != NULL)
+                    {
+                        for(int j = 0; j < 127; j++)
+                        {
+                            if (buff[j] == '\r') buff[j] = '\0';   
+                            if (buff[j] == '\n') buff[j] = '\0';    
+                        }
+                        
+                        strcat(s, " --");
+                        strcat(s, buff);
+                    }
+                }
+            }
+        }
+          
+        fclose(file);
+    }
+    
 	g_ptr_array_add (args, (gpointer) g_strdup ("pty"));
-	tmp = g_strdup_printf ("%s %s --nolaunchpppd --loglevel %c --logstring %s",
+    tmp = g_strdup_printf (s,
 	                       pptp_binary, gwaddr,
 	                       log_level,
 	                       ipparam);
