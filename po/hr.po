@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: network-manager-pptp\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/NetworkManager-pptp/"
 "issues\n"
-"POT-Creation-Date: 2020-05-26 23:28+0000\n"
-"PO-Revision-Date: 2021-10-01 18:32+0200\n"
+"POT-Creation-Date: 2022-03-11 15:58+0000\n"
+"PO-Revision-Date: 2022-03-12 21:06+0100\n"
 "Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <hr@li.org>\n"
 "Language: hr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2017-04-09 22:48+0000\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: ../appdata/network-manager-pptp.metainfo.xml.in.h:1
 msgid "PPTP VPN client"
@@ -51,39 +51,39 @@ msgstr "Potrebna vam je ovjera za pristup Virtualnoj Privatnoj Mreži “%s“."
 msgid "Authenticate VPN"
 msgstr "Ovjeri VPM"
 
-#: ../auth-dialog/main.c:157
+#: ../auth-dialog/main.c:157 ../properties/nm-pptp-dialog.ui.h:43
 msgid "Password"
 msgstr "Lozinka"
 
-#: ../properties/advanced-dialog.c:169
+#: ../properties/advanced-dialog.c:170
 msgid "All Available (Default)"
 msgstr "Sve dostupno (zadano)"
 
-#: ../properties/advanced-dialog.c:173
+#: ../properties/advanced-dialog.c:174
 msgid "128-bit (most secure)"
 msgstr "128-bitno (najsigurnije)"
 
-#: ../properties/advanced-dialog.c:182
+#: ../properties/advanced-dialog.c:183
 msgid "40-bit (less secure)"
 msgstr "40-bitno (manje sigurno)"
 
-#: ../properties/advanced-dialog.c:286
+#: ../properties/advanced-dialog.c:287
 msgid "PAP"
 msgstr "PAP"
 
-#: ../properties/advanced-dialog.c:299
+#: ../properties/advanced-dialog.c:300
 msgid "CHAP"
 msgstr "CHAP"
 
-#: ../properties/advanced-dialog.c:311
+#: ../properties/advanced-dialog.c:312
 msgid "MSCHAP"
 msgstr "MSCHAP"
 
-#: ../properties/advanced-dialog.c:323
+#: ../properties/advanced-dialog.c:324
 msgid "MSCHAPv2"
 msgstr "MSCHAPv2"
 
-#: ../properties/advanced-dialog.c:336
+#: ../properties/advanced-dialog.c:337
 msgid "EAP"
 msgstr "EAP"
 
@@ -263,14 +263,26 @@ msgid "PPTP Advanced Options"
 msgstr "PPTP napredne mogućnosti"
 
 #: ../properties/nm-pptp-dialog.ui.h:3
+msgid "Advanced Properties"
+msgstr "Napredna svojsta"
+
+#: ../properties/nm-pptp-dialog.ui.h:4
+msgid "_Cancel"
+msgstr "_Odustani"
+
+#: ../properties/nm-pptp-dialog.ui.h:5
+msgid "_Apply"
+msgstr "_Primijeni"
+
+#: ../properties/nm-pptp-dialog.ui.h:6
 msgid "Authentication"
 msgstr "Ovjera"
 
-#: ../properties/nm-pptp-dialog.ui.h:4
+#: ../properties/nm-pptp-dialog.ui.h:7
 msgid "Allow the following authentication methods:"
 msgstr "Dopusti sljedeće načine ovjere:"
 
-#: ../properties/nm-pptp-dialog.ui.h:5
+#: ../properties/nm-pptp-dialog.ui.h:8
 msgid ""
 "Allow/disable authentication methods.\n"
 "config: refuse-pap, refuse-chap, refuse-mschap, refuse-mschap-v2, refuse-eap"
@@ -279,15 +291,15 @@ msgstr ""
 "podešavanje: refuse-pap, refuse-chap, refuse-mschap, refuse-mschap-v2, "
 "refuse-eap"
 
-#: ../properties/nm-pptp-dialog.ui.h:7
+#: ../properties/nm-pptp-dialog.ui.h:10
 msgid "Security and Compression"
 msgstr "Sigurnost i sažimanje"
 
-#: ../properties/nm-pptp-dialog.ui.h:8
+#: ../properties/nm-pptp-dialog.ui.h:11
 msgid "Use _Point-to-Point encryption (MPPE)"
 msgstr "Koristi _Točka-u-Točku šifriranje (MPPE)"
 
-#: ../properties/nm-pptp-dialog.ui.h:9
+#: ../properties/nm-pptp-dialog.ui.h:12
 msgid ""
 "Note: MPPE encryption is only available with MSCHAP authentication methods. "
 "To enable this checkbox, select one or more of the MSCHAP authentication "
@@ -297,23 +309,23 @@ msgstr ""
 "omogućavanje ove metode, odaberite jednu ili više MSCHAP načina ovjere: "
 "MSCHAP ili MSCHAPv2."
 
-#: ../properties/nm-pptp-dialog.ui.h:10
+#: ../properties/nm-pptp-dialog.ui.h:13
 msgid "_Security:"
 msgstr "_Sigurnost:"
 
-#: ../properties/nm-pptp-dialog.ui.h:11
+#: ../properties/nm-pptp-dialog.ui.h:14
 msgid ""
 "Require the use of MPPE, with 40/128-bit encryption or all.\n"
-"config: require-mppe, require-mppe-128 or require-mppe-40"
+"    config: require-mppe, require-mppe-128 or require-mppe-40"
 msgstr ""
-"Potrebno za korištenje MPPE, s 40/128-bitnim šifriranjem ili  svim.\n"
-"podešavanje: require-mppe, require-mppe-128 or require-mppe-40"
+"Potrebno za korištenje MPPE, s 40/128-bitnim šifriranjem ili svim.\n"
+"    podešavanje: require-mppe, require-mppe-128 ili require-mppe-40"
 
-#: ../properties/nm-pptp-dialog.ui.h:13
+#: ../properties/nm-pptp-dialog.ui.h:16
 msgid "Allow st_ateful encryption"
 msgstr "Dopusti in_teligentno šifrirnje"
 
-#: ../properties/nm-pptp-dialog.ui.h:14
+#: ../properties/nm-pptp-dialog.ui.h:17
 msgid ""
 "Allow MPPE to use stateful mode. Stateless mode is still attempted first.\n"
 "config: mppe-stateful (when checked)"
@@ -322,11 +334,11 @@ msgstr ""
 "uvijek prvi.\n"
 "podešavanje: mppe-stateful (when checked)"
 
-#: ../properties/nm-pptp-dialog.ui.h:16
+#: ../properties/nm-pptp-dialog.ui.h:19
 msgid "Allow _BSD data compression"
 msgstr "Dopusti _BSD podatkovno sažimanje"
 
-#: ../properties/nm-pptp-dialog.ui.h:17
+#: ../properties/nm-pptp-dialog.ui.h:20
 msgid ""
 "Allow/disable BSD-Compress compression.\n"
 "config: nobsdcomp (when unchecked)"
@@ -334,11 +346,11 @@ msgstr ""
 "Dopusti/Onemogući BSD-Compress sažimanje.\n"
 "podešavanje: nobsdcomp (kada je odznačeno)"
 
-#: ../properties/nm-pptp-dialog.ui.h:19
+#: ../properties/nm-pptp-dialog.ui.h:22
 msgid "Allow _Deflate data compression"
 msgstr "Dopusti _Deflate podatkovno sažimanje"
 
-#: ../properties/nm-pptp-dialog.ui.h:20
+#: ../properties/nm-pptp-dialog.ui.h:23
 msgid ""
 "Allow/disable Deflate compression.\n"
 "config: nodeflate (when unchecked)"
@@ -346,11 +358,11 @@ msgstr ""
 "Dopusti/Onemogući Deflate sažimanje.\n"
 "podešavanje: nodeflate (kada nije odabrano)"
 
-#: ../properties/nm-pptp-dialog.ui.h:22
+#: ../properties/nm-pptp-dialog.ui.h:25
 msgid "Use TCP _header compression"
 msgstr "Koristi sažimanje TCP _zaglavlja"
 
-#: ../properties/nm-pptp-dialog.ui.h:23
+#: ../properties/nm-pptp-dialog.ui.h:26
 msgid ""
 "Allow/disable Van Jacobson style TCP/IP header compression in both the "
 "transmit and the receive directions.\n"
@@ -360,15 +372,15 @@ msgstr ""
 "(odašiljanju i primanju) smjera.\n"
 "podešavanje: novj (kada nije odabrano)"
 
-#: ../properties/nm-pptp-dialog.ui.h:25
-msgid "Echo"
-msgstr "Jeka"
+#: ../properties/nm-pptp-dialog.ui.h:28
+msgid "Misc"
+msgstr "Ostalo"
 
-#: ../properties/nm-pptp-dialog.ui.h:26
+#: ../properties/nm-pptp-dialog.ui.h:29
 msgid "Send PPP _echo packets"
 msgstr "Pošalji pakete PPP _jeke"
 
-#: ../properties/nm-pptp-dialog.ui.h:27
+#: ../properties/nm-pptp-dialog.ui.h:30
 msgid ""
 "Send LCP echo-requests to find out whether peer is alive.\n"
 "config: lcp-echo-failure and lcp-echo-interval"
@@ -376,27 +388,27 @@ msgstr ""
 "Pošalji LCP jeka-zahtjev za pronalazak aktivne točke.\n"
 "podešavanje: lcp-echo-failure i lcp-echo-interval"
 
-#: ../properties/nm-pptp-dialog.ui.h:29
-msgid "Misc"
-msgstr "Ostalo"
-
-#: ../properties/nm-pptp-dialog.ui.h:30
+#: ../properties/nm-pptp-dialog.ui.h:32
 msgid "Use custom _unit number:"
 msgstr "Koristi prilagođeni _broj jedinice:"
 
-#: ../properties/nm-pptp-dialog.ui.h:31
+#: ../properties/nm-pptp-dialog.ui.h:33
 msgid ""
 "Enable custom index for ppp<n> device name.\n"
-"config: unit <n>"
+"    config: unit <n>"
 msgstr ""
 "Omogući prilagođeni sadržaj za ppp<n> naziv uređaja.\n"
-"podešavanje: jedinica <n>"
+"    podešavanje: jedinica <n>"
 
-#: ../properties/nm-pptp-dialog.ui.h:33
+#: ../properties/nm-pptp-dialog.ui.h:35
 msgid "General"
 msgstr "Općenito"
 
-#: ../properties/nm-pptp-dialog.ui.h:34
+#: ../properties/nm-pptp-dialog.ui.h:36
+msgid "_Gateway"
+msgstr "_Pristupnik"
+
+#: ../properties/nm-pptp-dialog.ui.h:37
 msgid ""
 "PPTP server IP or name.\n"
 "config: the first parameter of pptp"
@@ -404,40 +416,15 @@ msgstr ""
 "PPTP IP poslužitelja ili naziv.\n"
 "podešavanje: prvi pptp parametar"
 
-#: ../properties/nm-pptp-dialog.ui.h:36
-msgid "_Gateway:"
-msgstr "_Pristupnik:"
-
-#: ../properties/nm-pptp-dialog.ui.h:37
+#: ../properties/nm-pptp-dialog.ui.h:39
 msgid "Optional"
 msgstr "Neobavezno"
 
-#: ../properties/nm-pptp-dialog.ui.h:38
-msgid ""
-"Append the domain name <domain> to the local host name for authentication "
-"purposes.\n"
-"config: domain <domain>"
-msgstr ""
-"Dodaj naziv domene <domain> lokalnim nazivu računala u svrhu ovjere.\n"
-"podešavanje: domain <domain>"
-
 #: ../properties/nm-pptp-dialog.ui.h:40
-msgid "NT Domain:"
-msgstr "NT domena:"
+msgid "User name"
+msgstr "Korisničko ime"
 
 #: ../properties/nm-pptp-dialog.ui.h:41
-msgid "Show password"
-msgstr "Prikaži lozinku"
-
-#: ../properties/nm-pptp-dialog.ui.h:42
-msgid "Password passed to PPTP when prompted for it."
-msgstr "Lozinka proslijeđena PPTP-u pri upitu."
-
-#: ../properties/nm-pptp-dialog.ui.h:43
-msgid "Password:"
-msgstr "Lozinka:"
-
-#: ../properties/nm-pptp-dialog.ui.h:44
 msgid ""
 "Set the name used for authenticating the local system to the peer to "
 "<name>.\n"
@@ -446,10 +433,33 @@ msgstr ""
 "Postavi ime za korištenje ovjere lokalnog sustava s točke u <ime>.\n"
 "podešavanje: user <name>"
 
+#: ../properties/nm-pptp-dialog.ui.h:44
+msgid "Password passed to PPTP when prompted for it."
+msgstr "Lozinka proslijeđena PPTP-u pri upitu."
+
+#: ../properties/nm-pptp-dialog.ui.h:45
+msgid "Show password"
+msgstr "Prikaži lozinku"
+
 #: ../properties/nm-pptp-dialog.ui.h:46
-msgid "User name:"
-msgstr "Korisničko ime:"
+msgid "NT Domain"
+msgstr "NT domena"
 
 #: ../properties/nm-pptp-dialog.ui.h:47
-msgid "Ad_vanced…"
-msgstr "Na_predno…"
+msgid ""
+"Append the domain name <domain> to the local host name for authentication "
+"purposes.\n"
+"config: domain <domain>"
+msgstr ""
+"Dodaj naziv domene <domain> lokalnim nazivu računala u svrhu ovjere.\n"
+"podešavanje: domain <domain>"
+
+#: ../properties/nm-pptp-dialog.ui.h:49
+msgid "Advance_d…"
+msgstr "Napredn_o…"
+
+#~ msgid "Echo"
+#~ msgstr "Jeka"
+
+#~ msgid "Password:"
+#~ msgstr "Lozinka:"
