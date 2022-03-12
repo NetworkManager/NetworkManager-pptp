@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/NetworkManager-pptp/"
 "issues\n"
 "POT-Creation-Date: 2022-03-11 15:58+0000\n"
-"PO-Revision-Date: 2022-03-12 21:06+0100\n"
+"PO-Revision-Date: 2022-03-12 21:19+0100\n"
 "Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <hr@li.org>\n"
 "Language: hr\n"
@@ -264,7 +264,7 @@ msgstr "PPTP napredne mogućnosti"
 
 #: ../properties/nm-pptp-dialog.ui.h:3
 msgid "Advanced Properties"
-msgstr "Napredna svojsta"
+msgstr "Napredna svojstva"
 
 #: ../properties/nm-pptp-dialog.ui.h:4
 msgid "_Cancel"
