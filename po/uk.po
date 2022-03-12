@@ -3,23 +3,21 @@
 # This file is distributed under the same license as the NetworkManager package.
 #
 # Maxim Dziumanenko <dziumanenko@gmail.com>, 2005-2007.
-# Yuri Chornoivan <yurchor@ukr.net>, 2020.
+# Yuri Chornoivan <yurchor@ukr.net>, 2020, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: NetworkManager pptp\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/NetworkManager-pptp/issue"
-"s\n"
-"POT-Creation-Date: 2020-05-04 15:39+0000\n"
-"PO-Revision-Date: 2020-05-04 20:37+0300\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/NetworkManager-pptp/issues\n"
+"POT-Creation-Date: 2022-03-11 15:58+0000\n"
+"PO-Revision-Date: 2022-03-12 09:06+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<"
-"=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 20.07.70\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 20.12.0\n"
 
 #: ../appdata/network-manager-pptp.metainfo.xml.in.h:1
 msgid "PPTP VPN client"
@@ -53,44 +51,43 @@ msgstr ""
 "Вам слід пройти розпізнавання для отримання доступу до віртуальної приватної "
 "мережі «%s»."
 
-#: ../auth-dialog/main.c:155 ../auth-dialog/main.c:175
+#: ../auth-dialog/main.c:155 ../auth-dialog/main.c:176
 msgid "Authenticate VPN"
 msgstr "Розпізнавання у VPN"
 
-#: ../auth-dialog/main.c:157
-#| msgid "Password:"
+#: ../auth-dialog/main.c:157 ../properties/nm-pptp-dialog.ui.h:43
 msgid "Password"
 msgstr "Пароль"
 
-#: ../properties/advanced-dialog.c:169
+#: ../properties/advanced-dialog.c:170
 msgid "All Available (Default)"
 msgstr "Усі доступні (типово)"
 
-#: ../properties/advanced-dialog.c:173
+#: ../properties/advanced-dialog.c:174
 msgid "128-bit (most secure)"
 msgstr "128 біт (найбільш захищене)"
 
-#: ../properties/advanced-dialog.c:182
+#: ../properties/advanced-dialog.c:183
 msgid "40-bit (less secure)"
 msgstr "40 біт (менш захищене)"
 
-#: ../properties/advanced-dialog.c:286
+#: ../properties/advanced-dialog.c:287
 msgid "PAP"
 msgstr "PAP"
 
-#: ../properties/advanced-dialog.c:299
+#: ../properties/advanced-dialog.c:300
 msgid "CHAP"
 msgstr "CHAP"
 
-#: ../properties/advanced-dialog.c:311
+#: ../properties/advanced-dialog.c:312
 msgid "MSCHAP"
 msgstr "MSCHAP"
 
-#: ../properties/advanced-dialog.c:323
+#: ../properties/advanced-dialog.c:324
 msgid "MSCHAPv2"
 msgstr "MSCHAPv2"
 
-#: ../properties/advanced-dialog.c:336
+#: ../properties/advanced-dialog.c:337
 msgid "EAP"
 msgstr "EAP"
 
@@ -273,14 +270,29 @@ msgid "PPTP Advanced Options"
 msgstr "Додаткові параметри PPTP"
 
 #: ../properties/nm-pptp-dialog.ui.h:3
+#| msgid "PPTP Advanced Options"
+msgid "Advanced Properties"
+msgstr "Додаткові властивості"
+
+#: ../properties/nm-pptp-dialog.ui.h:4
+msgid "_Cancel"
+msgstr ""
+"_Скасувати"
+
+#: ../properties/nm-pptp-dialog.ui.h:5
+msgid "_Apply"
+msgstr ""
+"_Застосувати"
+
+#: ../properties/nm-pptp-dialog.ui.h:6
 msgid "Authentication"
 msgstr "Розпізнавання"
 
-#: ../properties/nm-pptp-dialog.ui.h:4
+#: ../properties/nm-pptp-dialog.ui.h:7
 msgid "Allow the following authentication methods:"
 msgstr "Дозволити такі методи розпізнавання:"
 
-#: ../properties/nm-pptp-dialog.ui.h:5
+#: ../properties/nm-pptp-dialog.ui.h:8
 msgid ""
 "Allow/disable authentication methods.\n"
 "config: refuse-pap, refuse-chap, refuse-mschap, refuse-mschap-v2, refuse-eap"
@@ -289,15 +301,15 @@ msgstr ""
 "Файл налаштувань: refuse-pap, refuse-chap, refuse-mschap, refuse-mschap-v2, "
 "refuse-eap"
 
-#: ../properties/nm-pptp-dialog.ui.h:7
+#: ../properties/nm-pptp-dialog.ui.h:10
 msgid "Security and Compression"
 msgstr "Шифрування та стиснення"
 
-#: ../properties/nm-pptp-dialog.ui.h:8
+#: ../properties/nm-pptp-dialog.ui.h:11
 msgid "Use _Point-to-Point encryption (MPPE)"
 msgstr "Використовувати шифрування _MPPE"
 
-#: ../properties/nm-pptp-dialog.ui.h:9
+#: ../properties/nm-pptp-dialog.ui.h:12
 msgid ""
 "Note: MPPE encryption is only available with MSCHAP authentication methods. "
 "To enable this checkbox, select one or more of the MSCHAP authentication "
@@ -307,23 +319,26 @@ msgstr ""
 "увімкнути цей пункт, виберіть один чи кілька методів розпізнавання MSCHAP: "
 "MSCHAP чи MSCHAPv2."
 
-#: ../properties/nm-pptp-dialog.ui.h:10
+#: ../properties/nm-pptp-dialog.ui.h:13
 msgid "_Security:"
 msgstr "_Шифрування:"
 
-#: ../properties/nm-pptp-dialog.ui.h:11
+#: ../properties/nm-pptp-dialog.ui.h:14
+#| msgid ""
+#| "Require the use of MPPE, with 40/128-bit encryption or all.\n"
+#| "config: require-mppe, require-mppe-128 or require-mppe-40"
 msgid ""
 "Require the use of MPPE, with 40/128-bit encryption or all.\n"
-"config: require-mppe, require-mppe-128 or require-mppe-40"
+"    config: require-mppe, require-mppe-128 or require-mppe-40"
 msgstr ""
 "Вимагати використання MPPE із 40/128-бітовим шифруванням або з обома.\n"
 "Файл налаштувань: require-mppe, require-mppe-128 або require-mppe-40"
 
-#: ../properties/nm-pptp-dialog.ui.h:13
+#: ../properties/nm-pptp-dialog.ui.h:16
 msgid "Allow st_ateful encryption"
 msgstr "Увімкнути шифрування зі з_береженням стану"
 
-#: ../properties/nm-pptp-dialog.ui.h:14
+#: ../properties/nm-pptp-dialog.ui.h:17
 msgid ""
 "Allow MPPE to use stateful mode. Stateless mode is still attempted first.\n"
 "config: mppe-stateful (when checked)"
@@ -332,11 +347,11 @@ msgstr ""
 "спочатку буде встановлено режим без збереження стану.\n"
 "Файл налаштувань: mppe-stateful (якщо позначено)"
 
-#: ../properties/nm-pptp-dialog.ui.h:16
+#: ../properties/nm-pptp-dialog.ui.h:19
 msgid "Allow _BSD data compression"
 msgstr "Увімкнути стиснення _BSD"
 
-#: ../properties/nm-pptp-dialog.ui.h:17
+#: ../properties/nm-pptp-dialog.ui.h:20
 msgid ""
 "Allow/disable BSD-Compress compression.\n"
 "config: nobsdcomp (when unchecked)"
@@ -344,11 +359,11 @@ msgstr ""
 "Дозволити або вимкнути стискання BSC-Compress.\n"
 "Файл налаштувань: nobsdcomp (якщо не позначено)"
 
-#: ../properties/nm-pptp-dialog.ui.h:19
+#: ../properties/nm-pptp-dialog.ui.h:22
 msgid "Allow _Deflate data compression"
 msgstr "Увімкнути стиснення _Deflate"
 
-#: ../properties/nm-pptp-dialog.ui.h:20
+#: ../properties/nm-pptp-dialog.ui.h:23
 msgid ""
 "Allow/disable Deflate compression.\n"
 "config: nodeflate (when unchecked)"
@@ -356,11 +371,11 @@ msgstr ""
 "Дозволити або вимкнути стискання DEFLATE.\n"
 "Файл налаштувань: nodeflate (якщо не позначено)"
 
-#: ../properties/nm-pptp-dialog.ui.h:22
+#: ../properties/nm-pptp-dialog.ui.h:25
 msgid "Use TCP _header compression"
 msgstr "Використовувати стиснення _заголовків TCP"
 
-#: ../properties/nm-pptp-dialog.ui.h:23
+#: ../properties/nm-pptp-dialog.ui.h:26
 msgid ""
 "Allow/disable Van Jacobson style TCP/IP header compression in both the "
 "transmit and the receive directions.\n"
@@ -370,15 +385,15 @@ msgstr ""
 "обох напрямках (передавання і отримання даних).\n"
 "Файл налаштувань: novj (якщо не позначено)"
 
-#: ../properties/nm-pptp-dialog.ui.h:25
-msgid "Echo"
-msgstr "Луна"
+#: ../properties/nm-pptp-dialog.ui.h:28
+msgid "Misc"
+msgstr "Інше"
 
-#: ../properties/nm-pptp-dialog.ui.h:26
+#: ../properties/nm-pptp-dialog.ui.h:29
 msgid "Send PPP _echo packets"
 msgstr "Надсилати _echo-пакети PPP"
 
-#: ../properties/nm-pptp-dialog.ui.h:27
+#: ../properties/nm-pptp-dialog.ui.h:30
 msgid ""
 "Send LCP echo-requests to find out whether peer is alive.\n"
 "config: lcp-echo-failure and lcp-echo-interval"
@@ -386,27 +401,31 @@ msgstr ""
 "Надсилати луна-запити LCP для визначення працездатності вузла зв’язку.\n"
 "Файл налаштувань: lcp-echo-failure і lcp-echo-interval"
 
-#: ../properties/nm-pptp-dialog.ui.h:29
-msgid "Misc"
-msgstr "Інше"
-
-#: ../properties/nm-pptp-dialog.ui.h:30
+#: ../properties/nm-pptp-dialog.ui.h:32
 msgid "Use custom _unit number:"
 msgstr "Нетиповий _номер модуля:"
 
-#: ../properties/nm-pptp-dialog.ui.h:31
+#: ../properties/nm-pptp-dialog.ui.h:33
+#| msgid ""
+#| "Enable custom index for ppp<n> device name.\n"
+#| "config: unit <n>"
 msgid ""
 "Enable custom index for ppp<n> device name.\n"
-"config: unit <n>"
+"    config: unit <n>"
 msgstr ""
 "Увімкнути нетиповий індекс для назви пристрою ppp<n>.\n"
 "Файл налаштувань: unit <n>"
 
-#: ../properties/nm-pptp-dialog.ui.h:33
+#: ../properties/nm-pptp-dialog.ui.h:35
 msgid "General"
 msgstr "Загальне"
 
-#: ../properties/nm-pptp-dialog.ui.h:34
+#: ../properties/nm-pptp-dialog.ui.h:36
+#| msgid "_Gateway:"
+msgid "_Gateway"
+msgstr "_Шлюз"
+
+#: ../properties/nm-pptp-dialog.ui.h:37
 msgid ""
 "PPTP server IP or name.\n"
 "config: the first parameter of pptp"
@@ -414,41 +433,16 @@ msgstr ""
 "IP або назва сервера PPTP.\n"
 "Файл налаштувань: перший параметр pptp"
 
-#: ../properties/nm-pptp-dialog.ui.h:36
-msgid "_Gateway:"
-msgstr "_Шлюз:"
-
-#: ../properties/nm-pptp-dialog.ui.h:37
+#: ../properties/nm-pptp-dialog.ui.h:39
 msgid "Optional"
 msgstr "Додаткові"
 
-#: ../properties/nm-pptp-dialog.ui.h:38
-msgid ""
-"Append the domain name <domain> to the local host name for authentication "
-"purposes.\n"
-"config: domain <domain>"
-msgstr ""
-"Дописувати назву домену <domain> до назви локального вузла з метою \n"
-"проходження розпізнавання.\n"
-"Файл налаштувань: domain <domain>"
-
 #: ../properties/nm-pptp-dialog.ui.h:40
-msgid "NT Domain:"
-msgstr "NT-домен:"
+#| msgid "User name:"
+msgid "User name"
+msgstr "Ім'я користувача"
 
 #: ../properties/nm-pptp-dialog.ui.h:41
-msgid "Show password"
-msgstr "Показати пароль"
-
-#: ../properties/nm-pptp-dialog.ui.h:42
-msgid "Password passed to PPTP when prompted for it."
-msgstr "Пароль, який буде передано PPTP у відповідь на запит щодо пароля."
-
-#: ../properties/nm-pptp-dialog.ui.h:43
-msgid "Password:"
-msgstr "Пароль:"
-
-#: ../properties/nm-pptp-dialog.ui.h:44
 msgid ""
 "Set the name used for authenticating the local system to the peer to "
 "<name>.\n"
@@ -458,13 +452,39 @@ msgstr ""
 "значення <name>.\n"
 "налаштування: user <name>"
 
+#: ../properties/nm-pptp-dialog.ui.h:44
+msgid "Password passed to PPTP when prompted for it."
+msgstr "Пароль, який буде передано PPTP у відповідь на запит щодо пароля."
+
+#: ../properties/nm-pptp-dialog.ui.h:45
+msgid "Show password"
+msgstr "Показати пароль"
+
 #: ../properties/nm-pptp-dialog.ui.h:46
-msgid "User name:"
-msgstr "Ім'я користувача:"
+#| msgid "NT Domain:"
+msgid "NT Domain"
+msgstr "NT-домен"
 
 #: ../properties/nm-pptp-dialog.ui.h:47
-msgid "Ad_vanced…"
+msgid ""
+"Append the domain name <domain> to the local host name for authentication "
+"purposes.\n"
+"config: domain <domain>"
+msgstr ""
+"Дописувати назву домену <domain> до назви локального вузла з метою \n"
+"проходження розпізнавання.\n"
+"Файл налаштувань: domain <domain>"
+
+#: ../properties/nm-pptp-dialog.ui.h:49
+#| msgid "Ad_vanced…"
+msgid "Advance_d…"
 msgstr "Д_одатково…"
+
+#~ msgid "Echo"
+#~ msgstr "Луна"
+
+#~ msgid "Password:"
+#~ msgstr "Пароль:"
 
 #~ msgid "_Secondary Password:"
 #~ msgstr "_Вторинний пароль:"
